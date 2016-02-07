@@ -1,0 +1,7 @@
+Interface=enp5s0
+Connection=ethernet
+IP=static
+Address=('192.168.101.252/24')
+Gateway='192.168.101.254'
+DNS=('192.168.101.254')
+ExcludeAuto=no

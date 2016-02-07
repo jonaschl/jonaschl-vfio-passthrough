@@ -1,0 +1,295 @@
+    1  ls
+    2  ls
+    3  nano /etc/locale.gen 
+    4  locale-gen
+    5  nano /etc/vconsole.conf
+    6  cd /etc/
+    7  ls
+    8  tzselect
+    9  ln -s /usr/share/zoneinfo/Europe/Berlin /etc/localtime
+   10  mkinitcpio -p linux
+   11  grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=arch
+   12  pacman -Sy grub
+   13  pacman -Sy efibootmgr
+   14  grub-install --target=x86_64-efi --efi-directory=/boot --bootloader-id=arch
+   15  grub-mkconfig -o /boot/grub/grub.cfg
+   16  nano /etc/hostname
+   17  nano /etc/host
+   18  passwd
+   19  exit
+   20  ls
+   21  cd &
+   22  loadkeys de
+   23  shutdown -h
+   24  shutdown -h now
+   25  pacman -SYu
+   26  pacman -Syu
+   27  nano Interface=enp1s0
+   28  nano /etc/netctl/default
+   29  pacmn -Sy ifplugd 
+   30  pacman -Sy ifplugd 
+   31  nano /etc/netctl/default
+   32  systemctl enable netctl-ifplugd@enp5s0.service
+   33  systemctl start netctl-ifplugd@enp5s0.service
+   34  ip addr show
+   35  ip link set enp5s0 up
+   36  ip addr show
+   37  dhcpcd enp5s0
+   38  ip addr show
+   39  loadkeys de
+   40  systemctl status sshd.service
+   41  pacman -Sy sshd
+   42  pacman -Sy ssh
+   43  pacm -Sy openssh
+   44  pacman -Sy openssh
+   45  systemctl status sshd.service
+   46  systemctl enable sshd.service
+   47  systemctl status sshd.service
+   48  systemctl start sshd.service
+   49  systemctl status sshd.service
+   50  passwd
+   51  nano /etc/ssh/sshd_config 
+   52  systemctl restart sshd.service
+   53  systemctl status netctl-ifplugd@enp5s0.service
+   54  reboot
+   55  ip addr show
+   56  systemctl status netctl-ifplugd@enp5s0.service
+   57  cat /etc/netctl/default 
+   58  pacman -Sy libvirt
+   59  pacman -Sy qemu bridge-utils ebtables dnsmasq openbsd-netcat
+   60  pacman -Sy qemu-arch-extra:
+   61  pacman -Sy qemu-arch-extra
+   62  systemctl enable libvirtd.service
+   63  systemctl enable virtlogd.service
+   64  systemctl enable libvirtd.service
+   65  reboot
+   66  lsmod
+   67  lsmod | grep vfio
+   68  find / | grep qemu-system
+   69  cd /var/lib/libvirt/images/
+   70  ls
+   71  wget http://wiki.alpinelinux.org/cgi-bin/dl.cgi/v3.3/releases/x86_64/alpine-3.3.1-x86_64.iso
+   72  pacman -Sy wget
+   73  wget http://wiki.alpinelinux.org/cgi-bin/dl.cgi/v3.3/releases/x86_64/alpine-3.3.1-x86_64.iso
+   74  pacman -Sy htop
+   75  htop 
+   76  nano /etc/default/grub rub-mkconfig -o /boot/grub/grub.cf
+   77  lspci -nnk
+   78  nano /etc/default/grub 
+   79  grub-mkconfig -o /boot/grub/grub.cfg
+   80  cd /etc/mkinitcpio.d/
+   81  ls
+   82  cat linux.preset 
+   83  cp linux.preset linux-save.preset 
+   84  nano linux.preset 
+   85  mkinitcpio -p linux
+   86  reboot
+   87  lsmod | grep vfio
+   88  find /sys/kernel/iommu_groups/ -type l
+   89  lspci
+   90  cat /proc/cmdline 
+   91  nano linux.preset 
+   92  nano /etc/mkinitcpio.d/linux.preset 
+   93  nano /sbin/vfio-override.sh
+   94  cat  /etc/mkinitcpio.d/linux.preset 
+   95  mkinitcpio -p linux
+   96  nano /etc/mkinitcpio.d/linux.preset 
+   97  mkinitcpio -p linux
+   98  mkinitcpio -p linux
+   99  reboot
+  100  lsmod
+  101  lsmod | grep vfio
+  102  lspci -nnk
+  103  modprobe vfio
+  104  lsmod | grep vfio
+  105  nano /etc/mkinitcpio.conf 
+  106  nano /etc/mkinitcpio.d/linux
+  107  nano /etc/mkinitcpio.d/linux.preset 
+  108  nano /etc/mkinitcpio.conf 
+  109  mkinitcpio -p linux
+  110  reboot
+  111  lsmod | grep vfio
+  112  lspci -nnk
+  113  mkinitcpio -L
+  114  mkinitcpio -H base
+  115  mkinitcpio -L
+  116  mkinitcpio -H base
+  117  cd /usr/lib/initcpio/hooks/
+  118  ls
+  119  cat keymap 
+  120  cat resume 
+  121  cd ..
+  122  cd in
+  123  cd install/
+  124  ls
+  125  cat keyboard 
+  126  cd ..
+  127  cd hooks/
+  128  ls
+  129  nano vga-override
+  130  cat /sbin/vfio-override.sh 
+  131  nano vga-override 
+  132  cat lvm2 
+  133  ls
+  134  cat u
+  135  cat usr 
+  136  nano vga-override 
+  137  cd ..
+  138  ls
+  139  cd busybox 
+  140  ls
+  141  cat busybox 
+  142  exit
+  143  cd /usr/lib/initcpio/
+  144  ls
+  145  cd busybox 
+  146  cd install/
+  147  ls
+  148  cat virtio 
+  149  ls
+  150  ls -l /usr/lib/initcpio/hooks/
+  151  cat consolefont 
+  152  cat lvm2 
+  153  nano vga-override
+  154  ls
+  155  cd ..
+  156  cd hooks/
+  157  l
+  158  ls
+  159  cat vga-override 
+  160  cd..
+  161  cd ..
+  162  cd install/
+  163  ls
+  164  nano vga-override 
+  165  nano /etc/mkinitcpio.conf 
+  166  nano /etc/mkinitcpio.conf 
+  167  history | grep mki
+  168  mkinitcpio -p linux
+  169  reboot
+  170  lsmod
+  171  lspci
+  172  lspci -nnk
+  173  lspci -nn
+  174  lspci 
+  175  lspci -vvv
+  176  lspci -vv
+  177  lspci -v
+  178  cat /usr/lib/initcpio/hooks/vga-override 
+  179  lsmod
+  180  modprobe -i vfio-pci
+  181  lspci -v
+  182  modprobe --help
+  183  cat /usr/lib/initcpio/hooks/vga-override 
+  184  ls
+  185  cat /sys/bus/pci/devices/0000:01:00.0/
+  186  cd /sys/bus/pci/devices/0000:01:00.0/
+  187  ls
+  188  cat driver_override 
+  189  modprobe vfio-pci
+  190  lspci -vv
+  191  lspci -v
+  192  modprobe --help
+  193  modprobe vfio-pci -v
+  194  modprobe -v vfio-pci
+  195  dmesg 
+  196  dmesg | grep vf
+  197  dmesg | grep immo
+  198  dmesg | grep im
+  199  lsmod |grep vfio
+  200  lsmod
+  201  modprobe -i vfio-pci
+  202  modprobe -i vfio-pci
+  203  lspci -v
+  204  lspci -nnk
+  205  lspci --help
+  206  lspci -k
+  207  echo "vfio-pci" > /sys/bus/pci/devices/$DEV/driver_override
+  208  echo "vfio-pci" > /sys/bus/pci/devices/0000:01:00.0/driver_override
+  209  modprobe -i vfio-pci
+  210  lspci -k
+  211  echo /sys/bus/pci/drivers/vfio-pci/new_id
+  212  lspci -k-nn
+  213  lspci -knn
+  214  echo "10de:1086" > /sys/bus/pci/drivers/vfio-pci/new_id
+  215  echo "10de:1086" > /sys/bus/pci/drivers/vfio-pci/new_id
+  216  cd /sys/bus/pci/drivers/vfio-pci/
+  217  ls
+  218  echo "10de:1086" > new_id 
+  219  echo "10de:1086" >> new_id 
+  220  echo 0000:01:00.0 > /sys/bus/pci/devices/0000:01:00.0/driver/unbind
+  221  cd ..
+  222  cd ..
+  223  ls
+  224  cd devices/
+  225  ls
+  226  cd 0000\:01\:00.0
+  227  ls
+  228  ls
+  229  cat vendor 
+  230  echo "10de 1086" > /sys/bus/pci/drivers/vfio-pci/new_id
+  231  lspci -nnk
+  232  modprobe -i vfio-pci
+  233  lspci -nnk
+  234  cd /usr/lib/initcpio/
+  235  ls
+  236  cd hooks/
+  237  ls
+  238  nano vga-override 
+  239  history | grep mki
+  240  mkinitcpio -p linux
+  241  reboot
+  242  lspci -nnk
+  243  lsmod
+  244  nano /etc/modprobe.d/local.conf
+  245  reboot
+  246  ls
+  247  lsmod
+  248  cd /usr/bin/
+  249  ls
+  250  ls | grep qe
+  251  file qemu-x86_64 
+  252  qemu-x86_64 --help
+  253  qemu-system-x86_64 --help
+  254  mv qemu-system-x86_64 qemu-system-x86_64_org
+  255  ls
+  256  ls | grep qe
+  257  nano qemu-system-x86_64
+  258  chmod +x qemu-system-x86_64
+  259  qemu-system-x86_64 --help
+  260  qemu-system-x86_64 --help
+  261  qemu-system-x86_64 --help
+  262  reboot
+  263  lspci -nnk
+  264  lsmod
+  265  cd /var/lib/libvirt/images/
+  266  wget http://www.heise.de/download/a50dfa21438ad3871e87cdadb55bf825-1454786684-22184113.html
+  267  wget https://download.heise.de/software/46f79b16eb9eb7b724cc1595e790db5a/56b64885/184113/knoppix_v7.6.1dvd-2016-01-16-de.iso
+  268  dmesg
+  269  dmesg
+  270  dmesg
+  271  dmesg
+  272  dmesg
+  273  cat /etc/netctl/default 
+  274  pacman -Sy git
+  275  pacman -Sy git
+  276  ls
+  277  git clone https://github.com/jonaschl/jonaschl-vfio-passthrough.git
+  278  cd jonaschl-vfio-passthrough/
+  279  ls
+  280  mkdir -p arch
+  281  ls
+  282  cd arch
+  283  ls
+  284  cat /etc/netctl/default | echo > etc-netctl-default
+  285  cat etc-netctl-default 
+  286  cat /etc/netctl/default 
+  287  nano etc-netctl-default 
+  288  Cat /usr/lib/initcpio/hooks/vga-override 
+  289  cat /usr/lib/initcpio/hooks/vga-override 
+  290  nano usr-lib-initcpio-hooks-vga-override
+  291  nano usr-lib-initcpio-hooks-vga-override
+  292  cat usr-lib-initcpio-hooks-vga-override
+  293  cat /usr/lib/initcpio/install/vga-override 
+  294  nano usr-lib-initcpio-install-vga-override
+  295  history

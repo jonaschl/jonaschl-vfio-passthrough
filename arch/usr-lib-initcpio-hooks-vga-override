@@ -1,0 +1,15 @@
+#!/bin/ash
+
+run_hook() {
+
+DEVS="0000:01:00.0 0000:01:00.1 0000:00:02.0"
+
+for DEV in $DEVS; do
+    echo "vfio-pci" > /sys/bus/pci/devices/$DEV/driver_override
+done
+echo "10de 1086" > /sys/bus/pci/drivers/vfio-pci/new_id
+echo "10de 0e09" > /sys/bus/pci/drivers/vfio-pci/new_id
+echo "8086 0102" > /sys/bus/pci/drivers/vfio-pci/new_id
+modprobe -i vfio-pci
+
+}
